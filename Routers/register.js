@@ -17,6 +17,7 @@ Router.use(cors({
     return callback(new Error('Not allowed by CORS'));
   },
   credentials: true, // إذا كنت تستخدم الكوكيز أو الجلسات
+    exposedHeaders: ['x-auth-header'],         
 }));
 Router.use(express.json())
 
