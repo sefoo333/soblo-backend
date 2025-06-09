@@ -8,6 +8,11 @@ const jwt = require("jsonwebtoken")
 app.use(express.json())
 const secretKey = "alawyhabebqalby"
 
+app.use(cors({
+  origin: 'https://soblo-project.vercel.app/',
+  credentials: true      ,
+    exposedHeaders: ['x-auth-header'],         
+}))
 
 
 const register = async (req,res) => {
