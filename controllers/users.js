@@ -9,11 +9,8 @@ app.use(express.json())
 const secretKey = "alawyhabebqalby"
 const cors = require("cors")
 
-app.use(cors({
-  origin: 'https://soblo-project.vercel.app/',
-  credentials: true      ,
-    exposedHeaders: ['x-auth-header'],         
-}))
+Router.use(cors())
+
 
 
 const register = async (req,res) => {
