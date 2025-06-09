@@ -7,6 +7,7 @@ const bcy = require("bcrypt");
 const jwt = require("jsonwebtoken")
 app.use(express.json())
 const secretKey = "alawyhabebqalby"
+const cors = require("cors")
 
 app.use(cors({
   origin: 'https://soblo-project.vercel.app/',
