@@ -31,6 +31,13 @@ nxt()
 })
 
 
+app.use(cors({
+  origin: 'https://soblo-project.vercel.app/',
+  credentials: true      ,
+    exposedHeaders: ['x-auth-header'],         
+}))
+
+
 
 app.use("/api/posts" , postsRouter)
 app.use("/api/users" , Router)
