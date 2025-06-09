@@ -12,11 +12,12 @@ const helmet = require("helmet")
 
 const PORT = process.env.PORT || 3001;
 
-mongoose.connect("mongodb://localhost:27017/project").then((e) => {
+mongoose.connect("mongodb+srv://sefoo:sefoo123@seifali1.pm9zut9.mongodb.net/project").then((e) => {
     console.log("Connection Success")
 }).catch((err) => {
     console.log("error =>" , err)
 })
+
 
 
 app.use(helmet())
