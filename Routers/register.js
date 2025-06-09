@@ -6,11 +6,7 @@ const cors = require("cors")
 
 
 
-Router.use(cors({
-  origin: 'https://soblo-project.vercel.app/',
-  credentials: true      ,
-    exposedHeaders: ['x-auth-header'],         
-}))
+Router.use(cors())
 
 Router.use(express.json())
 
