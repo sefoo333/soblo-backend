@@ -9,17 +9,13 @@ app.use(express.json())
 const secretKey = "alawyhabebqalby"
 const cors = require("cors")
 
-const website = "https://soblo-project.vercel.app/"
+
+const website = "https://soblo-project.vercel.app"
 
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
-    if (website == origin) {
-      return callback(null, true);
-    }
-    return callback(new Error('Not allowed by CORS'));
-  },
+  origin:website,
   credentials: true, // إذا كنت تستخدم الكوكيز أو الجلسات
+    exposedHeaders: ['x-auth-header'],         
 }));
 
 
