@@ -40,8 +40,6 @@ app.use("/api/admin_login",admin_login)
 
 
 
-app.listen(PORT, () => {
-    console.log("server is running")
-})
+
 
 
