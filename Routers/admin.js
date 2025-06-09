@@ -12,7 +12,7 @@ Router.use(express.json())
 
 
 Router.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://soblo-project.vercel.app/',
   credentials: true      ,
     exposedHeaders: ['x-auth-header'],         
 }))
