@@ -38,7 +38,7 @@ app.use("/api/register",UserRouter)
 app.use("/api/login",LgoinRouter)
 app.use("/api/admin_login",admin_login)
 
-
+app.listen(PORT , () => console.log("success"))
 
 
 
