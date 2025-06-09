@@ -9,7 +9,7 @@ app.use(express.json())
 const secretKey = "alawyhabebqalby"
 const cors = require("cors")
 
-Router.use(cors())
+app.use(cors())
 
 
 
