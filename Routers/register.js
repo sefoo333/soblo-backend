@@ -6,7 +6,7 @@ const cors = require("cors")
 
 
 
-const website = "https://soblo-project.vercel.app/"
+const website = "https://soblo-project.vercel.app"
 
 Router.use(cors({
   origin: function (origin, callback) {
