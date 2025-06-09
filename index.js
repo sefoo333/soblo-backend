@@ -9,6 +9,9 @@ const postsRouter = require("./Routers/posts.js")
 const cors = require("cors")
 const helmet = require("helmet")
 
+
+const PORT = process.env.PORT || 3001;
+
 mongoose.connect("mongodb://localhost:27017/project").then((e) => {
     console.log("Connection Success")
 }).catch((err) => {
@@ -37,7 +40,7 @@ app.use("/api/admin_login",admin_login)
 
 
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log("server is running")
 })
 
