@@ -8,7 +8,7 @@ const cors = require("cors")
 
 const website = "https://soblo-project.vercel.app/"
 
-app.use(cors({
+Router.use(cors({
   origin: function (origin, callback) {
     if (!origin) return callback(null, true);
     if (website == origin) {
