@@ -7,7 +7,7 @@ const adminrole = require("../middlewars/isadmin");
 
 
 Router.use(cors({
-  origin: 'https://soblo-project.vercel.app/',
+  origin: 'https://soblo-project.vercel.app',
   credentials: true      ,
     exposedHeaders: ['x-auth-header'],         
 }))
