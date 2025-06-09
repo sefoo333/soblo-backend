@@ -5,8 +5,9 @@ const users = require("../controllers/users");
 const cors = require("cors")
 
 
-Router.use(cors({
-  origin: 'http://localhost:3000',
+
+app.use(cors({
+  origin: 'https://soblo-project.vercel.app/',
   credentials: true      ,
     exposedHeaders: ['x-auth-header'],         
 }))
