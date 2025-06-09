@@ -10,9 +10,9 @@ const cors = require("cors")
 const helmet = require("helmet")
 
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 
-mongoose.connect("mongodb+srv://sefoo:sefoo123@seifali1.pm9zut9.mongodb.net/project").then((e) => {
+mongoose.connect(process.env.database_soblo).then((e) => {
     console.log("Connection Success")
 }).catch((err) => {
     console.log("error =>" , err)
