@@ -32,7 +32,7 @@ nxt()
 
 
 app.use(cors({
-  origin: 'https://soblo-project.vercel.app/',
+  origin: 'https://soblo-project.vercel.app',
   credentials: true      ,
     exposedHeaders: ['x-auth-header'],         
 }))
