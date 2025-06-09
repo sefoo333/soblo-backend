@@ -6,8 +6,18 @@ const cors = require("cors")
 
 
 
-Router.use(cors())
+const website = "https://soblo-project.vercel.app/"
 
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (website == origin) {
+      return callback(null, true);
+    }
+    return callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true, // إذا كنت تستخدم الكوكيز أو الجلسات
+}));
 Router.use(express.json())
 
 Router.post("/" , users.register);
