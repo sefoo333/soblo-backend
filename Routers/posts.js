@@ -7,7 +7,7 @@ const cors = require("cors");
 const isadmin = require("../middlewars/isadmin");
 Router.use(express.json())
 Router.use(cors({
-  origin: 'https://soblo-project.vercel.app' || "http://localhost:3000",
+  origin: ['https://soblo-project.vercel.app',"http://localhost:3000"],  
   credentials: true      ,
     exposedHeaders: ['x-auth-header'],         
 }))
