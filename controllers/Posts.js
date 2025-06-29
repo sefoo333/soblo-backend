@@ -21,7 +21,7 @@ const io = new Server(server, {
 
 
 app.use(cors({
-  origin: 'https://soblo-project.vercel.app' || "http://localhost:3000",  
+  origin: ['https://soblo-project.vercel.app',"http://localhost:3000"],  
   credentials: true      ,
     exposedHeaders: ['x-auth-header'],         
 }))
