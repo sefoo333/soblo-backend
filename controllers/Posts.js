@@ -13,7 +13,7 @@ const { Server } = require("socket.io");
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // ← ده هو الفرونت
+    origin: "http://localhost:3000", 
     methods: ["GET", "POST"],
     credentials: true
   }
@@ -21,7 +21,7 @@ const io = new Server(server, {
 
 
 app.use(cors({
-  origin: 'https://soblo-project.vercel.app',
+  origin: 'https://soblo-project.vercel.app' || "http://localhost:3000",  
   credentials: true      ,
     exposedHeaders: ['x-auth-header'],         
 }))
