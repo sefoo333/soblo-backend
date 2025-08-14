@@ -8,8 +8,7 @@ const bcrypt = require("bcrypt")
 app.use(express.json())
 
 const getAllUsers = async (req,res) => {
-const students = await [{
-}];
+const students = await model.find().select({UserName:1 , email:1 , isAdmin:1 , image:1 , id:1})
 
 if (students){
     res.send(students)
