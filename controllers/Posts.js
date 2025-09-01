@@ -40,7 +40,7 @@ const getAllPosts = async (req,res) => {
 }
 
 const Createpost = async (req,res) => {
-    const newPost = await new model({
+   const newPost = await new model({
         PostName:req.body.postName,
         writer:"seifeldeen Ali",
         Banner:req.body.Banner,
@@ -50,10 +50,10 @@ const Createpost = async (req,res) => {
         view:0,
         loves:0,
         Date:req.body.Date,
-        language:req.body.language || false,
+        language:req.body.language,
         languageData:{
-            title:req.body.title || "",
-            body:req.body.body || "",
+            title:req.body.languageData.title,
+            body:req.body.languageData.body,
         }
     })
     
