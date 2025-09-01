@@ -13,10 +13,11 @@ const cors = require("cors")
 const website = "https://soblo-project.vercel.app"
 
 app.use(cors({
-  origin:website,
-  credentials: true, // إذا كنت تستخدم الكوكيز أو الجلسات
+  origin: ['https://soblo-project.vercel.app',"http://localhost:3000"],  
+  credentials: true      ,
     exposedHeaders: ['x-auth-header'],         
-}));
+}))
+
 
 
 const register = async (req,res) => {
