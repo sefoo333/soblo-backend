@@ -7,6 +7,13 @@ const isadmin = require("../middlewars/isadmin");
 const bcrypt = require("bcrypt")
 app.use(express.json())
 
+app.use(cors({
+  origin: ['https://soblo-project.vercel.app',"http://localhost:3000"],  
+  credentials: true      ,
+    exposedHeaders: ['x-auth-header'],         
+}))
+
+
 const getAllUsers = async (req,res) => {
 const students = await model.find().select({UserName:1 , email:1 , isAdmin:1 , image:1 , id:1})
 
