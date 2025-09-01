@@ -21,9 +21,15 @@ const studentSchema = new mongoose.Schema({
     Date:{
         type:Date,
         default:new Date(),
-    }
-   
+    },
+    language:{
+        type:Boolean,
+    },
+   languageData:{
+    type:Object,
+   }
 })
+
 
 
 const model = mongoose.model("posts" , studentSchema)
