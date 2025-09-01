@@ -5,6 +5,8 @@ const model = require("../model/StudentModel")
 const validate = require("../util/StudentValidate");
 const isadmin = require("../middlewars/isadmin");
 const bcrypt = require("bcrypt")
+const cors = require("cors")
+
 app.use(express.json())
 
 app.use(cors({
