@@ -50,6 +50,11 @@ const Createpost = async (req,res) => {
         view:0,
         loves:0,
         Date:req.body.Date,
+        language:req.body.language || false,
+        languageData:{
+            title:req.body.title || "",
+            body:req.body.body || "",
+        }
     })
     
     try{
